@@ -11,19 +11,22 @@ import Notfound from './landing_page/Notfound';
 import ProductPage from './landing_page/product/ProductPage';
 import PricePage from './landing_page/pricing/PricePage';
 import SupportPage from './landing_page/support/supportPage';
+// import s from "./components/Home";
+import Home from "../dashbord/src/components/Home"
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  <Navbar/>
+    <Navbar />
     <Routes >
-      <Route path="/"element={<HomePage />}/>
-      <Route path="/signup" element={<Signup />}/>
-      <Route path="/about" element={<AboutPage />}/>
-      <Route path="/product" element={<ProductPage/>} />
-      <Route  path="/pricing" element={<PricePage/>}/>
-      <Route path="/support" element={<SupportPage/>}/>
-      <Route path='/*' element={<Notfound/>} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/product" element={<ProductPage />} />
+      <Route path="/pricing" element={<PricePage />} />
+      <Route path="/support" element={<SupportPage />} />
+      <Route path="/dashbord/*" element={<Home />} />
+      <Route path='/*' element={<Notfound />} />
     </Routes>
-    <Footer/>
+    <Footer />
   </BrowserRouter>
 )
